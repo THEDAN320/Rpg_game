@@ -5,6 +5,7 @@ import sys
 def fight(player,enemy):
 		
 	while True:
+		print(f"Ваше здоровье - {player.hp}/{player.max_hp}\n")
 		print(f"Уровень {player.stage}")
 		print(f"Имя врага  - {enemy.name}")
 		print(f"Здоровье врага  - {enemy.hp}")
@@ -49,8 +50,6 @@ def fight(player,enemy):
 
 			player.hp -= dmg_on_player
 			print(f"Получено {dmg_on_player} урона")
-			print()
-			print(f"Ваше здоровье - {player.hp}\n")
 			
 		if choice == "2":
 			
@@ -58,9 +57,9 @@ def fight(player,enemy):
 				print("У вас нет зелий!")
 				
 			else:
+				print("Вы использовали зелье!")
 				player.hp += 50 + player.hp_recovery
 				if player.hp > player.max_hp:
 					player.hp = player.max_hp
 				player.inventory["hill_potion"] -= 1
-			
 		
