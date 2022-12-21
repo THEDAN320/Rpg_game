@@ -2,9 +2,6 @@ from random import randint
 import time
 import sys
 
-def space():
-	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-
 def fight(player,enemy):
 		
 	while True:
